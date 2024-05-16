@@ -1,11 +1,11 @@
 import Contact from "../Contact/Contact"
 import style from "./ContactList.module.css"
 import { useSelector } from "react-redux"
-import { selectVisibleContacts } from "../../redux/selector"
+import { selectFilteredContacts } from "../../redux/selector"
 
 
 export default function ContactList() {
-  const visibleContacts = useSelector(selectVisibleContacts)
+  const visibleContacts = useSelector(selectFilteredContacts)
 
   return (
     <ul className={style.tottalList}>
